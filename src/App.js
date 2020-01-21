@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import {ListAS} from "./ComponentAS";
+import getData from './funcAS/getDataAS'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+
+    state = {
+        ticketsData: []
+    };
+
+    componentDidMount() {
+        getData('https://front-test.beta.aviasales.ru/search')
+            .then(r => {
+                getData(`https://front-test.beta.aviasales.ru/tickets?searchId=${r.searchId}`)
+                    .then(r => {
+                        this.setState({
+                            ticketsData: r.tickets.slice(0, 10)
+                        })
+                    })
+            })
+    }
+
+
+
+    render() {
+        return (
+            <div>
+                App
+                <ListAS data={this.state.ticketsData}/>
+            </div>
+        );
+    }
+
+
 }
-
-export default App;
