@@ -1,10 +1,10 @@
 import React, {Component} from "react";
+import convertDate from "../../funcAS/convertDate";
 
-export default class ItemAS extends Component{
-    carrier;
-componentDidMount() {
-    console.log(this.props)
-}
+export default class ItemAS extends Component {
+    componentDidMount() {
+        convertDate(this.props.segments[0])
+    }
 
     render() {
         return (
