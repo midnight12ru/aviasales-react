@@ -1,28 +1,82 @@
 import React, {Component} from "react";
-import convertDate from "../../funcAS/convertDate";
+import {Item} from 'semantic-ui-react';
+import convertData from "../../funcAS/convertData";
+
+import './ItemAS.scss'
 
 export default class ItemAS extends Component {
     componentDidMount() {
-        convertDate(this.props.segments[0])
     }
 
     render() {
+        let segmentsFirst = convertData(this.props.segments[0])
+        let segmentsSecond = convertData(this.props.segments[1])
+
         return (
-            <div>
-                <div>
-                    <span>{this.props.price}</span>
-                    <span>
-                        <img src={`http://pics.avs.io/99/36/${this.props.carrier}.png`} alt=""/>
-                    </span>
+            <Item>
+                <div className={'item__head'}>
+                    <span className={'price'}>{this.props.price} Р</span>
+                    <img className={'img'} src={`http://pics.avs.io/99/36/${this.props.carrier}.png`} alt=""/>
                 </div>
-                <div>
-                    asd
+                <div className={'item__desc'}>
+                    <div className={'col'}>
+                        <Item.Content>
+                            <Item.Header as='p'>{segmentsFirst.cityStr}</Item.Header>
+                            <Item.Description>
+                                {segmentsFirst.departure} - {segmentsFirst.arrival}
+                            </Item.Description>
+                        </Item.Content>
+                    </div>
+                    <div className={'col'}>
+                        <Item.Content>
+                            <Item.Header as='p'>в пути</Item.Header>
+                            <Item.Description>
+                                {segmentsFirst.duration}
+                            </Item.Description>
+                        </Item.Content>
+                    </div>
+                    <div className={'col'}>
+                        <Item.Content>
+                            <Item.Header as='p'>пересадки</Item.Header>
+                            <Item.Description>
+                                {segmentsFirst.stops[1]}
+                            </Item.Description>
+                        </Item.Content>
+                    </div>
                 </div>
-                <div>
-                    zxc
+                <div className={'item__desc'}>
+                    <div className={'col'}>
+                        <Item.Content>
+                            <Item.Header as='p'>{segmentsSecond.cityStr}</Item.Header>
+                            <Item.Description>
+                                {segmentsSecond.departure} - {segmentsSecond.arrival}
+                            </Item.Description>
+                        </Item.Content>
+                    </div>
+                    <div className={'col'}>
+                        <Item.Content>
+                            <Item.Header as='p'>в пути</Item.Header>
+                            <Item.Description>
+                                {segmentsSecond.duration}
+                            </Item.Description>
+                        </Item.Content>
+                    </div>
+                    <div className={'col'}>
+                        <Item.Content>
+                            <Item.Header as='p'>пересадки</Item.Header>
+                            <Item.Description>
+                                {segmentsSecond.stops[1]}
+                            </Item.Description>
+                        </Item.Content>
+                    </div>
                 </div>
-            </div>
+
+            </Item>
         );
     }
-
 }
+
+// cityStr: "MOW - HKT"
+// departure: "1 февраля 2020 г., 19:04"
+// duration: "20ч. 19 мин."
+// arrival

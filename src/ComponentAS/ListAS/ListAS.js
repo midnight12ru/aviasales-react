@@ -32,12 +32,8 @@ export default class ListAS extends Component {
     render() {
         return (
             <div>
-                ListAS
-                <hr/>
                 <this.RenderList/>
             </div>
         );
     }
-
-
 }
