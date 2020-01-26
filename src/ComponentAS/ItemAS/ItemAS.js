@@ -15,8 +15,12 @@ export default class ItemAS extends Component {
         return (
             <Item>
                 <div className={'item__head'}>
-                    <span className={'price'}>{this.props.price} Р</span>
-                    <img className={'img'} src={`http://pics.avs.io/99/36/${this.props.carrier}.png`} alt=""/>
+                    <div className={'price'}>
+                        <span >{String(this.props.price).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')} Р</span>
+                    </div>
+                    <div className={'img'}>
+                        <img src={`http://pics.avs.io/99/36/${this.props.carrier}.png`} alt=""/>
+                    </div>
                 </div>
                 <div className={'item__desc'}>
                     <div className={'col'}>
@@ -39,7 +43,7 @@ export default class ItemAS extends Component {
                         <Item.Content>
                             <Item.Header as='p'>пересадки</Item.Header>
                             <Item.Description>
-                                {segmentsFirst.stops[1]}
+                                {segmentsFirst.stops[1]  || 'без пересадок'}
                             </Item.Description>
                         </Item.Content>
                     </div>
@@ -65,7 +69,7 @@ export default class ItemAS extends Component {
                         <Item.Content>
                             <Item.Header as='p'>пересадки</Item.Header>
                             <Item.Description>
-                                {segmentsSecond.stops[1]}
+                                {segmentsSecond.stops[1] || 'без пересадок'}
                             </Item.Description>
                         </Item.Content>
                     </div>
