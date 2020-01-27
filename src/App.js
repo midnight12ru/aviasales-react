@@ -8,11 +8,12 @@ export default class App extends Component {
 
     state = {
         ticketsData: [],
-
+        filteredOption: [],
+        filteredList: []
     };
 
     constructor(props){
-        super(props)
+        super(props);
 
         this.FilterHandler = this.FilterHandler.bind(this)
     }

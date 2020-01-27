@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d5d9d0db-ca67-4efa-9180-2fdf6e0becb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ComponentAS/FilterAS/FilterAS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentAS/FilterAS/FilterAS.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ComponentAS/FilterAS/FilterAS.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentAS/FilterAS/FilterAS.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ComponentAS/ItemAS/ItemAS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentAS/ItemAS/ItemAS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComponentAS/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentAS/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -80,7 +82,7 @@
       <workItem from="1579635819514" duration="5923000" />
       <workItem from="1579714202548" duration="5482000" />
       <workItem from="1580026888582" duration="1686000" />
-      <workItem from="1580148562672" duration="425000" />
+      <workItem from="1580148562672" duration="4658000" />
     </task>
     <servers />
   </component>

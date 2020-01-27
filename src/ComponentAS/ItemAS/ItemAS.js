@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {Item} from 'semantic-ui-react';
 import convertData from "../../funcAS/convertData";
+import {ItemASdesc} from "../index";
 
 import './ItemAS.scss'
 
@@ -9,8 +10,7 @@ export default class ItemAS extends Component {
     }
 
     render() {
-        let segmentsFirst = convertData(this.props.segments[0])
-        let segmentsSecond = convertData(this.props.segments[1])
+        let [segmentsFirst, segmentsSecond] = [convertData(this.props.segments[0]), convertData(this.props.segments[1])];
 
         return (
             <Item>
@@ -22,58 +22,8 @@ export default class ItemAS extends Component {
                         <img src={`http://pics.avs.io/99/36/${this.props.carrier}.png`} alt=""/>
                     </div>
                 </div>
-                <div className={'item__desc'}>
-                    <div className={'col'}>
-                        <Item.Content>
-                            <Item.Header as='p'>{segmentsFirst.cityStr}</Item.Header>
-                            <Item.Description>
-                                {segmentsFirst.departure} - {segmentsFirst.arrival}
-                            </Item.Description>
-                        </Item.Content>
-                    </div>
-                    <div className={'col'}>
-                        <Item.Content>
-                            <Item.Header as='p'>в пути</Item.Header>
-                            <Item.Description>
-                                {segmentsFirst.duration}
-                            </Item.Description>
-                        </Item.Content>
-                    </div>
-                    <div className={'col'}>
-                        <Item.Content>
-                            <Item.Header as='p'>пересадки</Item.Header>
-                            <Item.Description>
-                                {segmentsFirst.stops[1]  || 'без пересадок'}
-                            </Item.Description>
-                        </Item.Content>
-                    </div>
-                </div>
-                <div className={'item__desc'}>
-                    <div className={'col'}>
-                        <Item.Content>
-                            <Item.Header as='p'>{segmentsSecond.cityStr}</Item.Header>
-                            <Item.Description>
-                                {segmentsSecond.departure} - {segmentsSecond.arrival}
-                            </Item.Description>
-                        </Item.Content>
-                    </div>
-                    <div className={'col'}>
-                        <Item.Content>
-                            <Item.Header as='p'>в пути</Item.Header>
-                            <Item.Description>
-                                {segmentsSecond.duration}
-                            </Item.Description>
-                        </Item.Content>
-                    </div>
-                    <div className={'col'}>
-                        <Item.Content>
-                            <Item.Header as='p'>пересадки</Item.Header>
-                            <Item.Description>
-                                {segmentsSecond.stops[1] || 'без пересадок'}
-                            </Item.Description>
-                        </Item.Content>
-                    </div>
-                </div>
+                <ItemASdesc {...segmentsFirst}/>
+                <ItemASdesc {...segmentsSecond}/>
             </Item>
         );
     }
