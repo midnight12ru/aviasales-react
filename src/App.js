@@ -14,7 +14,7 @@ export default class App extends Component {
     constructor(props){
         super(props)
 
-        this.setFilterVal = this.setFilterVal.bind(this)
+        this.FilterHandler = this.FilterHandler.bind(this)
     }
 
     componentDidMount() {
@@ -23,21 +23,21 @@ export default class App extends Component {
                 getData(`https://front-test.beta.aviasales.ru/tickets?searchId=${r.searchId}`)
                     .then(r => {
                         this.setState({
-                            ticketsData: r.tickets.slice(0, 10)
+                            ticketsData: r.tickets
                         })
                     })
             })
     }
 
-    setFilterVal(){
-        
+    FilterHandler(val){
+        console.log('app: ',val)
     }
 
     render() {
         return (
             <div id='App'>
-                <FilterAS />
-                <ListAS data={this.state.ticketsData}/>
+                <FilterAS FilterHandler={this.FilterHandler} />
+                <ListAS data={this.state.ticketsData.slice(0, 10)}/>
             </div>
         );
     }

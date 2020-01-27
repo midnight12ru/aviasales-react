@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d5d9d0db-ca67-4efa-9180-2fdf6e0becb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComponentAS/FilterAS/FilterAS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentAS/FilterAS/FilterAS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComponentAS/FilterAS/FilterAS.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentAS/FilterAS/FilterAS.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ComponentAS/ItemAS/ItemAS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentAS/ItemAS/ItemAS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ComponentAS/ListAS/ListAS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentAS/ListAS/ListAS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/funcAS/convertDate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/funcAS/convertTime.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +79,8 @@
       <updated>1579635817197</updated>
       <workItem from="1579635819514" duration="5923000" />
       <workItem from="1579714202548" duration="5482000" />
+      <workItem from="1580026888582" duration="1686000" />
+      <workItem from="1580148562672" duration="425000" />
     </task>
     <servers />
   </component>

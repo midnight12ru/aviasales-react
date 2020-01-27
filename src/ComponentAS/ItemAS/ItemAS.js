@@ -74,13 +74,7 @@ export default class ItemAS extends Component {
                         </Item.Content>
                     </div>
                 </div>
-
             </Item>
         );
     }
 }
-
-// cityStr: "MOW - HKT"
-// departure: "1 февраля 2020 г., 19:04"
-// duration: "20ч. 19 мин."
-// arrival
